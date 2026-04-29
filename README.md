@@ -1,1 +1,1 @@
-Check for latest contents
+Collaborative restaurant website project using PHP, MySQL, HTML, CSS, and MySQL.
