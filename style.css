@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #000;
+}
+
+/* ================= NAVIGATION (ALWAYS VISIBLE) ================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.65);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+    z-index: 999;
+    backdrop-filter: blur(4px);
+}
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+header a:hover {
+    color: #d8ffe0;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("media/Front.jpg");  /* your front background image */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.45);
+    z-index: -1;
+}
+.hero h1 {
+    font-size: 70px;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ================= INFO SECTION ================= */
+.info-section {
+    padding: 70px 80px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    background: white;
+    color: #1a1a1a;
+}
+
+/* LEFT SIDE */
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.info-title {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+.info-text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+    max-width: 90%;
+}
+
+/* RIGHT SIDE */
+.right {
+    border-left: 1px solid #e6e6e6;
+    padding-left: 30px;
+}
+.right-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.block-title {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #111;
+}
+.label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #777;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.phone-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0a5a2b;
+    margin-top: 10px;
+}
+
+/* ================= SIGN IN POPUP ================= */
+.modal-bg {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.modal-box {
+    background: white;
+    width: 330px;
+    padding: 22px;
+    border-radius: 10px;
+    position: relative;
+}
+.modal-box h2 {
+    margin-bottom: 15px;
+    color: #0a5a2b;
+}
+.close {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #0a5a2b;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #0a3a21;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d0e2d6;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+.btn {
+    width: 100%;
+    background: #0a5a2b;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.error {
+    color: #b02a37;
+    margin-top: 8px;
+    display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+    .hero h1 { font-size: 48px; }
+    .info-section {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+    }
+    .right {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 24px;
+    }
+}
+/* ================= IMAGE GALLERY ================= */
+.image-gallery {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 30%;
+    min-width: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
